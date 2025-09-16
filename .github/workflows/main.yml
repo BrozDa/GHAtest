@@ -9,11 +9,13 @@ jobs:
       - name: test-app
         run: echo "Building the app..."
   test:
+    needs: build
     runs-on: ubuntu-latest
     steps:
       - name: test-app
         run: echo "testing the app..."
   deploy:
+    needs: test
     runs-on: ubuntu-latest
     steps:
       - name: test-app
