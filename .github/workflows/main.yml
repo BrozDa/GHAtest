@@ -1,0 +1,21 @@
+name: Test
+on:
+  push:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: test-app
+        run: echo "Building the app..."
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: test-app
+        run: echo "testing the app..."
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: test-app
+        run: echo "deploying the app..."
+  
